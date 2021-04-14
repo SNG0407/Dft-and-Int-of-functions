@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <cmath>
+#include <cmath>  
 using namespace std;
 const float Pi = 3.141592;
 float integral(float t, float dt, float (*fx)(float));
