@@ -32,7 +32,8 @@ int main() {
 	float FF, iFF; //F는 적분
 	float g, ig; //g는 미분
 	N = T / dt;
-
+	/*int t = 0;
+	cout << " F(0) = " << (-3 / 2) / (1 + Pi * Pi) * (exp((-2) * t) * ((sin(2 * Pi * t) + Pi * cos(2 * Pi * t)) - Pi)) << endl;*/
 	ofstream Differential("function1-dif(T=20, dt=0.1).txt");
 	
 
@@ -56,7 +57,7 @@ int main() {
 		FF = integral(n * dt, dt, function1);
 		iFF = function1Int(n * dt);
 		rmse += (FF - iFF) * (FF - iFF);
-		cout << "ext_F(" << n * dt << ") = " << iFF << "      F(" << n * dt << ") = " << FF << endl;
+		//cout << "ext_F(" << n * dt << ") = " << iFF << "      F(" << n * dt << ") = " << FF << endl;
 		Integral << n * dt << "    " << iFF << "    " << FF << endl;
 
 	}
